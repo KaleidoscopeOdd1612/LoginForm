@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="darkreader-lock">
+        <meta name="color-scheme" content="light dark">
+        <title>LoginForm</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <!--POST require Backend handle but form still necessary for structure and accessibility-->
+        <form id="registrationForm" method="post">
+            <div id="blockSignup">
+                <fieldset id="field">
+                    <h1>Sessia<span class="heart">&#10084;</span></h1>
+                    <input class="dataInput" type="email" required placeholder="Email" name="email">
+                    <input class="dataInput" type="text" required placeholder="Enter your username" name="name">
+                    <input class="dataInput" type="password" minlength="8" placeholder="password" name="password">
+                </fieldset>
+                <div id="verifylabel">
+                    <label for="verify"><input id="verify" type="checkbox" required name="verify"> I agree to <a>term & condition</a></label>
+                </div>
+                <button class="btn" type="submit">Create account</button>
+            </div>
+        </form>
+        <form id="profileForm">
+            <div id="blockProfile">
+                <div class="blockCloseBtn">
+                    <button class="closeBtn" type="submit"><span class="cross">&times;</span></button>
+                </div>
+                <h1>Profile<span class="profile">&#128100;</span></h1>
+                <p>Email</p>
+                <input class="dataInputLabel" type="email" required readonly placeholder="Email" name="email">
+                <p>Username</p>
+                <input class="dataInputLabel" type="text" required placeholder="Enter your username" name="name">
+                <p>Password</p>
+                <input class="dataInputLabel" type="text" required readonly minlength="8" placeholder="password" name="password">
+            </div>
+        </form>
+        <script src="./script.js"></script>
+    </body>
+</html>
